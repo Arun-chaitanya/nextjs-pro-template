@@ -1,0 +1,130 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.primary {
+  @include body-font(1.6rem, 400);
+}
+
+.secondary {
+  @include secondary-font(1.6rem, 400);
+}
+
+.light {
+  color: $white;
+}
+
+.grey {
+  color: $grey5;
+}
+
+.grey2 {
+  color: $grey2;
+}
+
+.grey6 {
+  color: $grey6;
+}
+
+.grey7 {
+  color: $grey7;
+}
+
+.grey8 {
+  color: $grey8;
+}
+
+.dark {
+  color: $dark;
+}
+
+.black {
+  color: $black;
+}
+
+.danger {
+  color: $failure;
+}
+
+.success {
+  color: $success;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.primary-light {
+  color: $primary-light;
+}
+
+.info {
+  color: $info;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.xxxs {
+  font-size: 1.1rem;
+}
+
+.xxs {
+  font-size: 1.2rem;
+}
+
+.xs {
+  font-size: 1.3rem;
+}
+
+.sm {
+  font-size: 1.4rem;
+}
+
+.md {
+  font-size: 1.6rem;
+}
+
+.lg {
+  font-size: 1.8rem;
+}
+
+.xl {
+  font-size: 2rem;
+}
+
+.xxl {
+  font-size: 2.4rem;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.noWrap {
+  white-space: nowrap;
+}

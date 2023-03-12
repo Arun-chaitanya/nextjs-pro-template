@@ -1,0 +1,20 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  position: fixed;
+  z-index: 200;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px -4px 14px rgba(0, 0, 0, 0.04);
+  background-color: $white;
+}
+
+.tab {
+  height: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

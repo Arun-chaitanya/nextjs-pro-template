@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+
+.root {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  svg {
+    path {
+      transition: $transition-default;
+    }
+    &:hover {
+      path {
+        opacity: 0.5;
+      }
+    }
+  }
+}

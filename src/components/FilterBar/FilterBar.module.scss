@@ -1,0 +1,25 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.pill {
+  padding: 0.6rem 1.6rem;
+  border-radius: 4.6rem;
+  background-color: $white;
+  border: 1px solid $border-2;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.barRoot {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow: scroll;
+  @include hide-scrollbar();
+  padding: 0 1rem;
+}

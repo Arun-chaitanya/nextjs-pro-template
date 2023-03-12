@@ -1,0 +1,66 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  word-wrap: break-word;
+}
+
+.primary {
+  @include header-font();
+}
+
+.secondary {
+  @include secondary-header-font();
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.normal {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.light {
+  color: $white;
+}
+
+.grey {
+  color: $grey5;
+}
+
+.dark {
+  color: $dark;
+}
+
+.danger {
+  color: $failure;
+}
+
+.success {
+  color: $success;
+}
+
+.black {
+  color: $black;
+}
+
+.primary-color {
+  color: $primary-color;
+}

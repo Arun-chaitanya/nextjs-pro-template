@@ -1,0 +1,33 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  position: relative;
+  border-bottom: 1px solid $border-2;
+}
+
+.accordion {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: $transition-default;
+}
+
+.active {
+  border-color: $primary-color;
+}
+
+.content {
+  padding: 1.5rem 0;
+}
+
+.icon {
+  transition: $transition-default;
+}
+
+.toggled {
+  transform: rotate(180deg);
+}

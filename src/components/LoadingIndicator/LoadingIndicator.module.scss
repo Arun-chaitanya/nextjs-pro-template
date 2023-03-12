@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+
+$size: 8rem;
+
+.root {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: $size * 2;
+  min-width: $size * 2;
+}
+
+.logo {
+  position: relative;
+  height: $size;
+  width: $size;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1rem solid $white;
+  opacity: 0;
+  border-radius: 50%;
+  height: $size * 1.5;
+  width: $size * 1.5;
+  transform: translate(-50%, -50%);
+  animation: dissolve 1.5s infinite ease-out;
+}
+
+@keyframes dissolve {
+  0% {
+    height: $size * 1.5;
+    width: $size * 1.5;
+    border-width: 1rem;
+    opacity: 1;
+  }
+  50% {
+    height: $size * 2;
+    width: $size * 2;
+    border-width: 0;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,65 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.values {
+  @include hide-scrollbar();
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  background-color: $shade3;
+  min-height: 48px;
+  padding: 1rem;
+  border-radius: 24px;
+  gap: 1rem;
+  @media (max-width: $screen_sm) {
+    padding: 0 1.5rem;
+  }
+}
+
+.input {
+  font-family: $body-font;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $white;
+  min-width: 10rem;
+  flex: 1 0 10rem;
+  background-color: transparent;
+  border: none;
+
+  &::placeholder {
+    color: $shade2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: $screen_sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.rightIcon {
+  position: absolute;
+  right: 2px;
+  color: $white;
+  svg {
+    transition: $transition-default;
+  }
+  @media (max-width: $screen_sm) {
+    right: 0.5rem;
+  }
+}
+
+.reverse {
+  transform: rotate(180deg);
+}

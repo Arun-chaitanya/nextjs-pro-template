@@ -1,0 +1,18 @@
+@import "src/styles/variables";
+
+.root {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  padding: 1.5rem 3.5rem;
+  @media (max-width: $screen_sm) {
+    padding: 2rem;
+  }
+}

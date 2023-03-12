@@ -1,0 +1,32 @@
+@import "src/styles/variables";
+
+.root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: $dark;
+}
+
+.main {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: calc(100vh - 10rem);
+
+  @media (max-width: $screen_sm) {
+    min-height: calc(100vh - 20rem);
+  }
+}
+
+.showDesktop {
+  @media (max-width: $screen_md) {
+    display: none;
+  }
+}
+
+.showMobile {
+  display: none;
+  @media (max-width: $screen_md) {
+    display: block;
+  }
+}

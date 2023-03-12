@@ -1,0 +1,230 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.relative {
+  position: relative;
+}
+
+.display-none {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.ws-nowrap {
+  white-space: nowrap;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.shrink0 {
+  flex-shrink: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.link {
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
+
+.scroll-grid {
+  @include hide-scrollbar();
+  overflow-x: auto;
+
+  .grid-block {
+    overflow: visible;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.min-width0 {
+  min-width: 0;
+}
+
+.lh-1 {
+  line-height: 1.5;
+}
+
+$spaceAmounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$sides: (top, bottom, left, right);
+
+body {
+  @each $space in $spaceAmounts {
+    .m#{$space} {
+      margin: #{$space * 0.1}rem;
+    }
+    .mv#{$space} {
+      margin-top: #{$space * 0.1}rem;
+      margin-bottom: #{$space * 0.1}rem;
+    }
+    .mh#{$space} {
+      margin-left: #{$space * 0.1}rem;
+      margin-right: #{$space * 0.1}rem;
+    }
+    .mt#{$space} {
+      margin-top: #{$space * 0.1}rem;
+    }
+    .mb#{$space} {
+      margin-bottom: #{$space * 0.1}rem;
+    }
+    .ml#{$space} {
+      margin-left: #{$space * 0.1}rem;
+    }
+    .mr#{$space} {
+      margin-right: #{$space * 0.1}rem;
+    }
+    .p#{$space} {
+      padding: #{$space * 0.1}rem;
+    }
+    .pv#{$space} {
+      padding-top: #{$space * 0.1}rem;
+      padding-bottom: #{$space * 0.1}rem;
+    }
+    .ph#{$space} {
+      padding-left: #{$space * 0.1}rem;
+      padding-right: #{$space * 0.1}rem;
+    }
+    .pt#{$space} {
+      padding-top: #{$space * 0.1}rem;
+    }
+    .pb#{$space} {
+      padding-bottom: #{$space * 0.1}rem;
+    }
+    .pl#{$space} {
+      padding-left: #{$space * 0.1}rem;
+    }
+    .pr#{$space} {
+      padding-right: #{$space * 0.1}rem;
+    }
+  }
+}
+
+$sizes: (10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40);
+
+body {
+  @each $size in $sizes {
+    .fs#{$size} {
+      font-size: #{$size}px;
+      line-height: #{$size + 4}px;
+    }
+  }
+}

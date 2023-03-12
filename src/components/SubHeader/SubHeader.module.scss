@@ -1,0 +1,25 @@
+@import "src/styles/variables";
+
+.content {
+  position: relative;
+  z-index: 202;
+}
+
+.flower {
+  position: absolute;
+  z-index: 201;
+  top: -5.2rem;
+  right: -3.1rem;
+}
+
+.root {
+  padding: 2rem 0 1.5rem 0;
+  z-index: 200;
+  position: relative;
+  background-color: $primary-bg;
+  @media (max-width: $screen_md) {
+    position: sticky;
+  }
+  top: 0;
+  overflow: hidden;
+}

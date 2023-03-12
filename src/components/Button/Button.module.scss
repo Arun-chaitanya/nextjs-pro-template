@@ -1,0 +1,207 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  @include body-font(1.6rem, 700, $white);
+  transition: $transition-default;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  min-height: 4rem;
+
+  @media (max-width: $screen_sm) {
+    min-height: 3rem;
+  }
+
+  @media (max-width: $screen_xs) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.contained {
+  border-radius: 10px;
+  justify-content: center;
+  background-color: $primary-color;
+  padding: 1.2rem 2.4rem;
+
+  &:hover:not([disabled]) {
+    background-color: $primary-color;
+  }
+}
+
+.dark {
+  justify-content: center;
+  background-color: $dark;
+  padding: 1.8rem;
+  border-radius: 10px;
+
+  &:hover:not([disabled]) {
+    background-color: $dark;
+  }
+}
+
+.action {
+  min-height: 5rem;
+  padding: 1.2rem 1.6rem;
+  justify-content: center;
+  background-color: $white;
+  color: $dark;
+  border-radius: 10px;
+
+  &:hover:not([disabled]) {
+    background-color: $grey5;
+  }
+
+  svg {
+    color: $dark;
+
+    path {
+      fill: $dark;
+    }
+  }
+}
+
+.primary {
+  width: 100%;
+  justify-content: center;
+  padding: 0.8rem 1.3rem;
+  background-color: $primary-bg;
+  color: $dark;
+  border-radius: 10px;
+  @include body-font(1.2rem, 500, $primary-color);
+
+  &:hover:not([disabled]) {
+    background-color: $primary-bg;
+  }
+
+  svg {
+    color: $dark;
+    margin-right: 5px;
+  }
+}
+
+.text {
+  padding: 0;
+  color: $black;
+
+  svg {
+    color: $dark;
+
+    path {
+      fill: $white;
+      transition: $transition-default;
+    }
+  }
+
+  &:hover:not([disabled]) {
+    color: $primary-color;
+
+    svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  @media (max-width: $screen_xs) {
+    justify-content: space-between;
+  }
+}
+
+.normal {
+  border: 1px solid $white;
+  border-radius: 10px;
+
+  svg {
+    color: $dark;
+
+    path {
+      fill: $white;
+      transition: $transition-default;
+    }
+  }
+
+  &:hover {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+.link {
+  @include body-font(1.6rem, 500, $white);
+  text-decoration: underline;
+  padding: 0;
+
+  svg {
+    color: $white;
+
+    path {
+      fill: $white;
+      transition: $transition-default;
+    }
+  }
+
+  &:hover:not([disabled]) {
+    color: $primary-color;
+
+    svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+.outlined {
+  border: 1px $white solid;
+  justify-content: center;
+  padding: 0.8rem 2.4rem;
+  border-radius: 10px;
+}
+
+.gray {
+  padding: 0.8rem 2.4rem;
+  justify-content: center;
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+
+  &:hover:not([disabled]) {
+    border-color: $primary-color;
+  }
+}
+
+.loading {
+  color: $white;
+  margin-left: 1.5rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -1,0 +1,29 @@
+@import "src/styles/variables";
+
+.primary {
+  .tooltip {
+    background-color: $primary;
+  }
+  .arrow {
+    color: $primary;
+  }
+}
+
+.grey {
+  .tooltip {
+    background-color: $shade3;
+  }
+  .arrow {
+    color: $shade3;
+  }
+}
+
+.tooltip {
+  max-width: 50rem;
+  padding: 1.5rem;
+  margin: 2.5rem;
+}
+
+.arrow {
+  font-size: 2rem;
+}

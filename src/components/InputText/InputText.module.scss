@@ -1,0 +1,99 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  position: relative;
+}
+
+.input {
+  @include body-font(16px, 500, $dark);
+  height: 4.6rem;
+  padding: 0 2rem;
+  width: 100%;
+  border: 2px solid $border;
+  transition: $transition-default;
+
+  @media (max-width: $screen_sm) {
+    height: 6rem;
+  }
+
+  &::placeholder {
+    color: $grey5;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $grey5;
+    & + .search {
+      svg {
+        color: $dark;
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.error {
+    outline-color: $failure;
+    border-color: $failure;
+  }
+}
+
+.normal {
+  background-color: $white;
+}
+
+.rounded {
+  background-color: $white;
+  border-radius: 8px;
+  @media (max-width: $screen_sm) {
+    border-color: $border;
+  }
+}
+
+.errorText {
+  @include body-font(1.4rem, 300, $failure);
+}
+
+.eye {
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1rem;
+  @media (max-width: $screen_sm) {
+    height: 6rem;
+  }
+  svg {
+    font-size: 2rem;
+    color: $grey5;
+  }
+}
+
+.search {
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 1.5rem;
+  @media (max-width: $screen_sm) {
+    height: 6rem;
+  }
+  svg {
+    transition: $transition-default;
+    font-size: 3rem;
+    color: $grey2;
+  }
+}
+
+.readonly {
+  background-color: $greyD1;
+}

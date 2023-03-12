@@ -1,0 +1,132 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+html,
+body {
+  @include body-font(10px, 400);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  background: $light;
+  color: $white;
+
+  @media (max-width: $screen_md) {
+    font-size: 9px;
+  }
+
+  @media (max-width: $screen_sm) {
+    font-size: 8px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p,
+a,
+div,
+span,
+input,
+textarea,
+button {
+  margin: 0;
+  border: none;
+  border-radius: unset;
+  background: none;
+  outline: none;
+}
+
+button {
+  text-align: left;
+}
+
+hr {
+  width: 100%;
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid $grey4;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  padding-inline-start: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.2rem;
+
+  @media (max-width: $screen_sm) {
+    font-size: 2.8rem;
+  }
+}
+
+h2 {
+  font-size: 2.8rem;
+
+  @media (max-width: $screen_sm) {
+    font-size: 2.6rem;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+.lh-1 {
+  line-height: 1.5;
+}

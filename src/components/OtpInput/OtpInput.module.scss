@@ -1,0 +1,22 @@
+.otpGroup {
+  gap: 1rem;
+  display: flex;
+  width: fit-content;
+}
+
+.otpInput {
+  padding: 0;
+  width: 100%;
+  min-height: 5.5rem;
+
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+@import "src/styles/variables";
+
+.root {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.between {
+  justify-content: space-between;
+  li {
+    margin: 0;
+  }
+}
+
+.around {
+  justify-content: space-evenly;
+  li {
+    margin: 0;
+  }
+}
+
+.end {
+  justify-content: flex-end;
+}

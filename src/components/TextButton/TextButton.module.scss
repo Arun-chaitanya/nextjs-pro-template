@@ -1,0 +1,76 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  @include body-font(1.6rem);
+  display: inline-block;
+  transition: $transition-default;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.underlined {
+  text-decoration-line: underline;
+}
+
+.loading {
+  color: $white;
+}
+
+.primary {
+  color: $primary-color;
+}
+
+.light {
+  color: $dark;
+}
+
+.grey {
+  color: $grey5;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.heavy {
+  font-weight: 700;
+}
+
+.xxs {
+  font-size: 1.2rem;
+}
+
+.xs {
+  font-size: 1.3rem;
+}
+
+.sm {
+  font-size: 1.4rem;
+}
+
+.md {
+  font-size: 1.6rem;
+}
+
+.lg {
+  font-size: 1.8rem;
+}
+
+.xl {
+  font-size: 2rem;
+}
+
+.disabled {
+}

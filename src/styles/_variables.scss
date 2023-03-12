@@ -1,0 +1,41 @@
+$white: #fff;
+$black: #000;
+
+$primary-bg: #fff6f1;
+$primary-color: #965609;
+$primary-light: rgba(#fae1d3, 0.6);
+$primary-disabled: rgba($primary-color, 0.4);
+$primary-border: rgba($primary-color, 0.17);
+
+$success: #3d9244;
+$failure: #d12020;
+$failure2: #ff8888;
+$failure3: #ffeeee;
+$info: #0155a0;
+
+$light: $white;
+$dark: #151516;
+$dark2: #130f26; //Observed for back < arrows
+
+$grey: #555555; //Observed for time in cards
+$grey2: #666666; //Observed for header description
+$grey2half: #717171; //Observed for calender disabled dates
+$grey3: #777777; //Observed for descriptions in card
+$grey4: #929292; //Observed for right > arrows
+$grey5: #989ca8; //Observed for input placeholder
+$grey6: #b3b3b3; //Observed for mobile navbar
+$grey7: #f8f8f8; //Observed for grey separation between white views
+
+$border: rgba(#e8e8e8, 0.76); //used for card borders
+$border-2: #ebebeb; //used for bottom border
+$border-3: #ececec; //used for input field border
+
+$modal_backdrop: rgba($black, 0.54);
+
+$transition-default: 250ms ease-in-out all;
+
+$screen_xs: 550px;
+$screen_sm: 760px;
+$screen_md: 1020px;
+$screen_lg: 1270px;
+$screen_xl: 1420px;

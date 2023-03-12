@@ -1,0 +1,61 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $screen_sm) {
+    &:hover {
+      .underline {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.underline {
+  position: absolute;
+  bottom: -5px;
+  width: 0;
+  border-bottom: 2px solid $primary-color;
+  transition: $transition-default;
+}
+
+.active {
+  width: 100%;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+.left {
+  margin-right: 2.5rem;
+}
+
+.right {
+  margin-left: 2.5rem;
+}
+
+.justify {
+  padding: 0 1rem;
+}
+
+.body {
+  @include body-font(1.6rem, 900, $dark);
+}
+
+.header {
+  @include header-font(1.6rem, 900, $primary-color);
+}
+
+.center {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+.fullWidth {
+  flex: 1;
+}
