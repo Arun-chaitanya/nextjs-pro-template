@@ -24,7 +24,6 @@ const Layout: React.FC<LayoutProps> = (props) => {
     removeHeader,
     isPublic,
   } = props;
-  const [userLoading, user] = usePrivatePage(isPublic);
 
   const isTab = useBreakpoint({ max: "md" });
 
@@ -45,7 +44,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
       )}
 
       <main className={clsx(styles.main, classes?.main)}>
-        {loading || (!isPublic && (userLoading || !user)) ? (
+        {loading ? (
           <div className="min-h-screen min-w-full flex flex-col items-center justify-center gap-4">
             <BeatLoader color="#965609" />
             <Text size="xs" color="primary-color" align="center" className="translate-x-2">
