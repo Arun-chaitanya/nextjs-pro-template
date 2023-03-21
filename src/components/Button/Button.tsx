@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     fullWidth,
     variant,
     onClick,
-    isUppercase,
+    isLowercase,
     isLoading,
     leftIcon,
     rightIcon,
@@ -44,7 +44,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     styles.root,
     fullWidth && styles.fullWidth,
     variant && styles[variant],
-    isUppercase && styles.lowercase,
+    isLowercase && styles.lowercase,
     className && className
   );
 
@@ -65,17 +65,17 @@ const Button: React.FC<ButtonProps> = (props) => {
       rel: isExternal ? "noopener noreferrer" : undefined,
     };
     return (
-      <Link href={href} {...(rest as Omit<LinkProps, "href">)}>
-        <a
-          {...linkProps}
-          className={classes}
-          onClick={onClick}
-          onClickCapture={onClickCapture}
-          data-testid="button"
-          id={id}
-        >
-          {buttonElements}
-        </a>
+      <Link
+        href={href}
+        {...(rest as Omit<LinkProps, "href">)}
+        {...linkProps}
+        className={classes}
+        onClick={onClick}
+        onClickCapture={onClickCapture}
+        data-testid="button"
+        id={id}
+      >
+        {buttonElements}
       </Link>
     );
   }
@@ -100,14 +100,14 @@ Button.defaultProps = {
   isExternal: false,
   withLoader: false,
   loadingText: null,
-  variant: "dark",
+  variant: "contained",
   fullWidth: false,
-  isUppercase: false,
+  isLowercase: false,
   isLoading: false,
 };
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  Partial<LinkProps> & {
+export type ButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> &
+  Omit<Partial<LinkProps>, "onClick"> & {
     isExternal?: boolean;
     disabled?: boolean;
     className?: string;
@@ -115,13 +115,13 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
     loadingText?: React.ReactNode;
     href?: string | UrlObject;
     fullWidth?: boolean;
-    variant?: "text" | "contained" | "action" | "link" | "normal" | "outlined" | "gray" | "primary" | "dark";
-    isUppercase?: boolean;
+    variant?: "text" | "contained" | "action" | "link" | "normal" | "outlined" | "gray" | "light" | "dark" | "gray2";
+    isLowercase?: boolean;
     isLoading?: boolean;
     leftIcon?: JSX.Element | null;
     rightIcon?: JSX.Element | null;
-    onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
-    onClickCapture?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+    onClick?: React.MouseEventHandler<any>;
+    onClickCapture?: React.MouseEventHandler<any>;
   };
 
 export default Button;

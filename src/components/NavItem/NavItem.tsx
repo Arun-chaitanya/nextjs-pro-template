@@ -15,9 +15,9 @@ const NavItem: React.FC<NavItemProps> = (props) => {
     active,
     showActive,
     position,
-    font,
-    dimInActive,
+    variant,
     id,
+    underlineClassName,
     ...rest
   } = props;
 
@@ -25,10 +25,6 @@ const NavItem: React.FC<NavItemProps> = (props) => {
 
   const isActive =
     showActive && (active || (href && (exact ? router.asPath === href : router.asPath.startsWith(href))));
-
-  const underline = (
-    <div className={clsx(styles.underline, isActive ? styles.active : "")} data-testid="nav-item-underline" />
-  );
 
   const renderLink = () => {
     if (!href) return <a onClick={onClick}>{children}</a>;
@@ -39,8 +35,8 @@ const NavItem: React.FC<NavItemProps> = (props) => {
         </a>
       );
     return (
-      <Link {...rest} href={href}>
-        <a onClick={onClick}>{children}</a>
+      <Link {...rest} href={href} onClick={onClick}>
+        {children}
       </Link>
     );
   };
@@ -50,15 +46,13 @@ const NavItem: React.FC<NavItemProps> = (props) => {
       className={clsx(
         styles.root,
         position && styles[position],
-        font && styles[font],
-        className,
-        !isActive && dimInActive ? styles.inactive : ""
+        variant && styles[variant],
+        isActive && styles.active,
+        className
       )}
-      data-testid="nav-item"
       id={id}
     >
       {renderLink()}
-      {!isExternal && underline}
     </li>
   );
 };
@@ -67,7 +61,7 @@ NavItem.defaultProps = {
   isExternal: false,
   showActive: true,
   position: "right",
-  font: "header",
+  variant: "header",
 };
 
 type NavItemProps = React.PropsWithChildren<
@@ -80,9 +74,9 @@ type NavItemProps = React.PropsWithChildren<
     active?: boolean;
     showActive?: boolean;
     position?: "left" | "right" | "justify" | "center";
-    font?: "body" | "header";
-    dimInActive?: boolean;
+    variant?: "body" | "header";
     id?: string;
+    underlineClassName?: string;
   }
 >;
 

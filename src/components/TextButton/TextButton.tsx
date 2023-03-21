@@ -34,21 +34,13 @@ const TextButton: React.FC<TextButtonProps> = (props) => {
   }
   if (href)
     return (
-      <Link href={href} {...rest}>
-        <a className={classes} onClick={onClick} data-testid="text-button">
-          {children}
-        </a>
+      <Link href={href} className={classes} onClick={onClick} data-testid="text-button" {...rest}>
+        {children}
       </Link>
     );
 
   return (
-    <button
-      className={classes}
-      onClick={withLoader ? handleClick : onClick}
-      data-testid="text-button"
-      {...rest}
-      disabled={false}
-    >
+    <button className={classes} onClick={withLoader ? handleClick : onClick} data-testid="text-button" {...rest}>
       {children}
     </button>
   );
@@ -61,13 +53,14 @@ TextButton.defaultProps = {
   underlined: true,
 };
 
-type TextButtonProps = React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> &
-  Partial<LinkProps> & {
+type TextButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement>, "onClick"> &
+  Omit<Partial<LinkProps>, "onClick"> & {
     color?: "primary" | "light" | "grey";
     weight?: "normal" | "medium" | "bold" | "heavy";
     size?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl";
     underlined?: boolean;
     withLoader?: boolean;
+    onClick?: React.MouseEventHandler<any>;
   };
 
 export default TextButton;

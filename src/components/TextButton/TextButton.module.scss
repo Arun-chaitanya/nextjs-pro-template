@@ -1,8 +1,8 @@
 @import "src/styles/variables";
-@import "src/styles/mixins";
 
 .root {
-  @include body-font(1.6rem);
+  font-family: $body-font;
+  font-size: 1.6rem;
   display: inline-block;
   transition: $transition-default;
   cursor: pointer;
@@ -21,15 +21,15 @@
 }
 
 .primary {
-  color: $primary-color;
+  color: $primary;
 }
 
 .light {
-  color: $dark;
+  color: $white;
 }
 
 .grey {
-  color: $grey5;
+  color: $shade1;
 }
 
 .normal {
@@ -70,7 +70,4 @@
 
 .xl {
   font-size: 2rem;
-}
-
-.disabled {
 }

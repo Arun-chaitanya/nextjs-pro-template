@@ -7,14 +7,12 @@ const IconButton: React.FC<IconButtonProps> = (props) => {
   const { children, href, className, ...rest } = props;
   if (href)
     return (
-      <Link href={href}>
-        <a className={clsx(styles.root, className)} data-testid="icon-button" {...rest}>
-          {children}
-        </a>
+      <Link href={href} className={clsx(styles.root, className)} data-testid="icon-button" {...rest}>
+        {children}
       </Link>
     );
   return (
-    <button className={clsx(styles.root, className)} data-testid="icon-button" {...rest}>
+    <button type="button" className={clsx(styles.root, className)} data-testid="icon-button" {...rest}>
       {children}
     </button>
   );

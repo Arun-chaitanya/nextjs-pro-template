@@ -1,23 +1,18 @@
 @import "src/styles/variables";
-@import "src/styles/mixins";
 
 .root {
-  @include body-font(1.6rem, 700, $white);
+  font-family: $header-font;
+  font-size: 2rem;
+  font-weight: 600;
+  color: $white;
   transition: $transition-default;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   white-space: nowrap;
-  min-height: 4rem;
-
-  @media (max-width: $screen_sm) {
-    min-height: 3rem;
-  }
-
-  @media (max-width: $screen_xs) {
-    display: flex;
-    justify-content: center;
-  }
+  min-height: 56px;
+  border-radius: 28px;
 
   &:disabled {
     opacity: 0.5;
@@ -26,88 +21,78 @@
 }
 
 .contained {
-  border-radius: 10px;
   justify-content: center;
-  background-color: $primary-color;
-  padding: 1.2rem 2.4rem;
+  background-color: $primary;
+  padding: 0.8rem 2.4rem;
 
   &:hover:not([disabled]) {
-    background-color: $primary-color;
+    background-color: $primary0;
   }
 }
 
 .dark {
   justify-content: center;
-  background-color: $dark;
-  padding: 1.8rem;
-  border-radius: 10px;
+  background-color: $black;
+  padding: 0.8rem 2.4rem;
 
   &:hover:not([disabled]) {
-    background-color: $dark;
+    background-color: $black;
   }
 }
 
 .action {
-  min-height: 5rem;
+  min-height: 56px;
   padding: 1.2rem 1.6rem;
-  justify-content: center;
+  justify-content: space-between;
   background-color: $white;
-  color: $dark;
-  border-radius: 10px;
+  color: $black;
 
   &:hover:not([disabled]) {
-    background-color: $grey5;
+    background-color: $shade1;
   }
 
   svg {
-    color: $dark;
-
-    path {
-      fill: $dark;
-    }
+    color: $black;
+    fill: $black;
   }
 }
 
-.primary {
-  width: 100%;
+.light {
   justify-content: center;
-  padding: 0.8rem 1.3rem;
-  background-color: $primary-bg;
-  color: $dark;
-  border-radius: 10px;
-  @include body-font(1.2rem, 500, $primary-color);
+  padding: 0.8rem 2.4rem;
+  background-color: $white;
+  color: $black;
 
   &:hover:not([disabled]) {
-    background-color: $primary-bg;
+    background-color: $shade1;
   }
 
   svg {
-    color: $dark;
-    margin-right: 5px;
+    color: $black;
+    fill: $black;
   }
 }
 
 .text {
   padding: 0;
-  color: $black;
 
   svg {
-    color: $dark;
-
-    path {
-      fill: $white;
-      transition: $transition-default;
-    }
+    color: $black;
+    fill: $white;
+    transition: $transition-default;
   }
 
   &:hover:not([disabled]) {
-    color: $primary-color;
+    color: $primary;
 
     svg {
-      path {
-        fill: $primary-color;
-      }
+      fill: $primary;
     }
+  }
+
+  &:focus {
+    text-decoration: underline;
+    outline: none;
   }
 
   @media (max-width: $screen_xs) {
@@ -117,25 +102,19 @@
 
 .normal {
   border: 1px solid $white;
-  border-radius: 10px;
 
   svg {
-    color: $dark;
-
-    path {
-      fill: $white;
-      transition: $transition-default;
-    }
+    color: $black;
+    fill: $white;
+    transition: $transition-default;
   }
 
   &:hover {
-    color: $primary-color;
-    border: 1px solid $primary-color;
+    color: $primary;
+    border: 1px solid $primary;
 
     svg {
-      path {
-        fill: $primary-color;
-      }
+      fill: $primary;
     }
   }
 
@@ -146,26 +125,24 @@
 }
 
 .link {
-  @include body-font(1.6rem, 500, $white);
+  font-family: $body-font;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $white;
   text-decoration: underline;
   padding: 0;
 
   svg {
     color: $white;
-
-    path {
-      fill: $white;
-      transition: $transition-default;
-    }
+    fill: $white;
+    transition: $transition-default;
   }
 
   &:hover:not([disabled]) {
-    color: $primary-color;
+    color: $primary;
 
     svg {
-      path {
-        fill: $primary-color;
-      }
+      fill: $primary;
     }
   }
 
@@ -179,18 +156,23 @@
   border: 1px $white solid;
   justify-content: center;
   padding: 0.8rem 2.4rem;
-  border-radius: 10px;
 }
 
 .gray {
   padding: 0.8rem 2.4rem;
   justify-content: center;
-  background-color: $primary-color;
-  border: 2px solid $primary-color;
+  background-color: $shade3;
+  border: 2px solid $shade3;
 
   &:hover:not([disabled]) {
-    border-color: $primary-color;
+    border-color: transparent;
   }
+}
+
+.gray2 {
+  padding: 0.8rem 2.4rem;
+  justify-content: center;
+  background-color: $shade3;
 }
 
 .loading {
@@ -202,6 +184,6 @@
   width: 100%;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.lowercase {
+  text-transform: none;
 }

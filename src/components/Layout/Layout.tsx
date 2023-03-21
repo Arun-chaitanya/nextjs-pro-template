@@ -1,8 +1,7 @@
 import clsx from "clsx";
-import { BeatLoader, SyncLoader } from "react-spinners";
+import { BeatLoader } from "react-spinners";
 
 import useBreakpoint from "@hooks/useBreakpoint";
-import usePrivatePage from "@hooks/usePrivatePage";
 
 import Header from "@components/Header";
 import MobileNavigator from "@components/MobileNavigator";

@@ -6,8 +6,8 @@ import Image from "@components/Image";
 import styles from "./Logo.module.scss";
 
 const LOGO_SRC = {
-  header: "/assets/logo/traveey_logo.png",
-  footer: "/assets/logo-white.svg",
+  header: "https://s3.ap-south-1.amazonaws.com/prod-assets.fancraze.com/assets/fc-logo-new.svg",
+  footer: "https://s3.ap-south-1.amazonaws.com/prod-assets.fancraze.com/assets/fc-logo-gray.svg",
 };
 
 const LOGO_ALT = {
@@ -24,16 +24,8 @@ const Logo: React.FC<LogoProps> = ({ variant, disabled, ...props }) => {
       </div>
     );
   return (
-    <Link href={props.href}>
-      <a className={clsx(styles.logo, styles[variant])} data-testid="logo" {...props}>
-        <Image
-          alt={LOGO_ALT[variant]}
-          src={LOGO_SRC[variant]}
-          layout="fill"
-          objectFit="contain"
-          className={clsx(styles.logo, styles[variant])}
-        />
-      </a>
+    <Link href="/" className={clsx(styles.logo, styles[variant])} data-testid="logo" {...props}>
+      <Image alt={LOGO_ALT[variant]} src={LOGO_SRC[variant]} layout="fill" objectFit="contain" />
     </Link>
   );
 };
@@ -45,7 +37,6 @@ Logo.defaultProps = {
 type LogoProps = React.DetailsHTMLAttributes<HTMLAnchorElement> & {
   variant?: "header" | "footer";
   disabled?: boolean;
-  href: string;
 };
 
 export default Logo;
