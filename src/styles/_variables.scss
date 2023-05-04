@@ -40,3 +40,36 @@ $screen_sm: 760px;
 $screen_md: 1020px;
 $screen_lg: 1270px;
 $screen_xl: 1420px;
+
+$header-font: "Circular20CyrTT", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+  Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$body-font: "Circular20CyrTT", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+  Droid Sans, Helvetica Neue, sans-serif;
+
+$white: #fff;
+$black: #000;
+$background: $black;
+$surface1: #191919;
+$surface2: #141419;
+$shade1: #c7c8d1;
+$shade2: #9295a6;
+$shade3: #363640;
+$shade4: #333333;
+$shade5: #121215;
+$shade0: #545454;
+$primary: #3c5df6;
+$primary0: #141f51;
+$yellow: #ffd229;
+$green: #00fdb1;
+$red: #ff5e5e;
+$red2: #fd004c;
+$pink: #ec5785;
+
+$stat1: #325eff;
+$stat2: #61d17a;
+$stat3: #373737;
+$stat4: #f22384;
+
+$common-shadow: -4px 0 4px rgba($black, 0.2);
+
+$transition-default: 250ms ease-in-out all;

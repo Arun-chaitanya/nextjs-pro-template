@@ -23,7 +23,7 @@ const MobileNavigator: React.FC = () => {
 
   return (
     <>
-      <div className="p-45" />
+      <div className="p45" />
       <div className={styles.root} data-testid="mobile-navigator">
         <Container>
           <Row>

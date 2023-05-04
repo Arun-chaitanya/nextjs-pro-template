@@ -1,18 +1,21 @@
 @import "src/styles/variables";
 
 .root {
+  position: relative;
+  flex-grow: 1;
   min-height: 100vh;
   width: 100vw;
+  max-width: 448px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: $background;
+  color: $white;
 }
 
 .inner {
   display: flex;
   justify-content: center;
   flex: 1 1 auto;
-  padding: 1.5rem 3.5rem;
-  @media (max-width: $screen_sm) {
-    padding: 2rem;
-  }
+  padding: 2rem;
 }

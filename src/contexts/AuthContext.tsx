@@ -1,7 +1,7 @@
 import { onAuthStateChanged, User } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 
-import { firebaseAuthConnect } from "@api/Firebase";
+import { firebaseAuth } from "@api/Firebase";
 
 export type AuthType = [boolean, User | null];
 
@@ -12,7 +12,8 @@ export const AuthProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(firebaseAuthConnect, async (user) => {
+    // const unsubscribe = onAuthStateChanged(firebaseAuthConnect, async (user) => {
+    const unsubscribe = onAuthStateChanged(firebaseAuth, async (user) => {
       if (!user) setUser(null);
       else {
         setUser(user);

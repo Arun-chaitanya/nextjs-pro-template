@@ -22,14 +22,14 @@ const SubHeader: React.FC<SubHeaderProps> = (props) => {
             <div className="flex items-center gap-6">
               {href || onClick ? <ArrowLeft className="text-[24px] translate-y-px" onClick={href} /> : null}
               {title && (
-                <Title variant={titleVariant} className="m-t-5">
+                <Title variant={titleVariant} className="mt5">
                   {title}
                 </Title>
               )}
             </div>
 
             {description && (
-              <Text color={textColor || "grey6"} size="sm" className="m-t-5">
+              <Text color={textColor || "grey6"} size="sm" className="mt5">
                 {description}
               </Text>
             )}

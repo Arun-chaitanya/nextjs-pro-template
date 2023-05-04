@@ -23,8 +23,8 @@ const InputText: React.FC<InputTextProps> = (props) => {
           styles.input,
           variant && styles[variant],
           error && styles.error,
-          isPassword && showVisibility && "p-r-35",
-          isSearch && "p-l-50",
+          isPassword && showVisibility && "pr35",
+          isSearch && "pl50",
           readOnly && styles.readonly,
           className
         )}

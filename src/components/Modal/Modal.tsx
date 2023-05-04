@@ -55,13 +55,13 @@ const Modal: React.FC<ModalProps> = (props) => {
               </Title>
             )}
             {description && (
-              <Text align="center" color="grey6" size="sm" className="m-t-15">
+              <Text align="center" color="grey6" size="sm" className="mt15">
                 {description}
               </Text>
             )}
             {hasHr && (
-              <div className="p-r-15">
-                <hr className="m-0" />
+              <div className="pr15">
+                <hr className="m0" />
               </div>
             )}
           </header>

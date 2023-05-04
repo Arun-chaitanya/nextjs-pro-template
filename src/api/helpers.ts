@@ -79,3 +79,19 @@ export async function fetchFormDataAPI<T>(
   if (response.status >= 200 && response.status < 300) return data?.data;
   else throw data;
 }
+
+export async function fetchAPIWithToken<T>(
+    token: string,
+    url: string,
+    method: string = "POST",
+    body: any = undefined
+): Promise<T | null> {
+  const headers = new Headers();
+  if (token) headers.append("x_auth_token", token);
+
+  const response = await fetch(API_BASE_URL + url, { method, headers, body });
+  const data = await response.json();
+
+  if (response.status >= 200 && response.status < 300) return data?.data;
+  else throw data;
+}

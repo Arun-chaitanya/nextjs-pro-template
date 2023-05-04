@@ -26,7 +26,7 @@ const Header: React.FC = () => {
     <>
       {tabs.map((item) => {
         return (
-          <NavItem key={item.href} className={isTab ? "" : "p-l-10 p-r-10"} href={item.href} exact>
+          <NavItem key={item.href} className={isTab ? "" : "pl10 pr10"} href={item.href} exact>
             {item.text}
           </NavItem>
         );

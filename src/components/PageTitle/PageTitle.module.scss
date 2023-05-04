@@ -1,0 +1,47 @@
+@import "src/styles/variables";
+
+.small {
+  font-size: 3.2rem;
+}
+
+.medium {
+  font-size: 4rem;
+}
+
+.large {
+  font-size: 4.8rem;
+}
+
+.x-large {
+  font-size: 5.6rem;
+}
+
+@media (max-width: $screen_md) {
+  .small {
+    font-size: 2.8rem;
+  }
+  .medium {
+    font-size: 3.2rem;
+  }
+  .large {
+    font-size: 3.6rem;
+  }
+  .x-large {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: $screen_sm) {
+  .small {
+    font-size: 2.4rem;
+  }
+  .medium {
+    font-size: 2.8rem;
+  }
+  .large {
+    font-size: 3.2rem;
+  }
+  .x-large {
+    font-size: 4rem;
+  }
+}

@@ -1,9 +1,9 @@
+import { User } from "firebase/auth";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-import { getSignInUrl } from "@config/urls";
+import { getAuthUrl } from "@config/urls";
 import useAuth from "@hooks/useAuth";
-import { User } from "firebase/auth";
 
 function usePrivatePage(isPublic?: boolean): [boolean, User | null] {
   const [loading, user] = useAuth();
@@ -13,7 +13,7 @@ function usePrivatePage(isPublic?: boolean): [boolean, User | null] {
     if (isPublic) return;
     if (!loading && !user) {
       localStorage.setItem("REDIRECTION", router.asPath);
-      router.replace(getSignInUrl());
+      router.replace(getAuthUrl());
     }
   }, [loading, user]);
 

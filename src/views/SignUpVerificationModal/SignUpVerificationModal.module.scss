@@ -1,0 +1,15 @@
+@import "src/styles/variables";
+
+.img {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 3rem;
+}
+
+.verificationModal {
+  bottom: unset;
+  background-color: $background;
+  height: stretch;
+  padding: 3rem;
+}

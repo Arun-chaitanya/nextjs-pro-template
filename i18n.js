@@ -10,7 +10,7 @@ module.exports = {
     "/activity": ["activity"],
     "/settings/mfa": ["mfa"],
     "/auth": ["authentication", "mfa"],
-    "/login": ["authentication", "mfa"],
+    "/sign-in": ["authentication", "mfa"],
     "/sign-up": ["authentication", "mfa"],
     "/forgot-password": ["authentication"],
     "/gateway/funds/withdraw": ["mfa"],

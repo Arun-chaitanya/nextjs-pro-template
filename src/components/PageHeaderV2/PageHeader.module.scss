@@ -1,0 +1,31 @@
+@import "src/styles/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  background-color: $background;
+  z-index: 2;
+  transition: $transition-default;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+  background-color: $shade3;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2.25 1;
+}
